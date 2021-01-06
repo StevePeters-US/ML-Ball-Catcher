@@ -1,0 +1,24 @@
+{
+    "BoxBehavior": {
+        "checkpoints": [
+            {
+                "steps": 22400,
+                "file_path": "results\\BallCatcher_00\\BoxBehavior\\BoxBehavior-22400.onnx",
+                "reward": null,
+                "creation_time": 1609893949.3809836
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 22400,
+            "file_path": "results\\BallCatcher_00\\BoxBehavior.onnx",
+            "reward": null,
+            "creation_time": 1609893949.3809836
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.22.0",
+        "torch_version": "1.7.0",
+        "tensorflow_version": -1
+    }
+}

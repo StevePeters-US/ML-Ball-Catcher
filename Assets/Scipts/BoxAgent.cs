@@ -15,12 +15,15 @@ public class BoxAgent : Agent
     [SerializeField] private Text CounterText;
 
     private Rigidbody agentRB;
-    private Vector3 startingPos = Vector3.zero;    
+    private Vector3 startingPos = Vector3.zero;
+
+    private StatsRecorder stats;
 
     // Start is called before the first frame update
     void Start()
     {
-        agentRB = GetComponent<Rigidbody>(); 
+        agentRB = GetComponent<Rigidbody>();
+        stats = Academy.Instance.StatsRecorder;
     }
 
     public override void OnEpisodeBegin()
@@ -30,6 +33,8 @@ public class BoxAgent : Agent
         Count = 0;
 
         ballSpawner.BeginEpisode();
+
+        UpdateCounterText();
     }
 
 
@@ -79,20 +84,28 @@ public class BoxAgent : Agent
         if (other.tag == "Ball")
         {
             UpdateReward(1);
+            Count += 1;
+
+            UpdateCounterText();
+
+            stats.Add("Agents Stats / numBallsCaught", Count);
+
             other.gameObject.SetActive(false);
         }        
     }
 
-    public void UpdateReward(int rewardAmount)
+    private void UpdateCounterText()
     {
-        AddReward(rewardAmount);
-        Count += rewardAmount;        
-
         // We'll only be setting text on the first instance of the environment
         if (CounterText)
         {
             CounterText.text = "Count : " + Count;
         }
+    }
+
+    public void UpdateReward(float rewardAmount)
+    {
+        AddReward(rewardAmount);        
     }
 
     public void MissedBall()

@@ -1,0 +1,48 @@
+{
+    "BoxBehavior": {
+        "checkpoints": [
+            {
+                "steps": 1999995,
+                "file_path": "results\\BallCatcher_02\\BoxBehavior\\BoxBehavior-1999995.onnx",
+                "reward": null,
+                "creation_time": 1609904664.9126625
+            },
+            {
+                "steps": 2499995,
+                "file_path": "results\\BallCatcher_02\\BoxBehavior\\BoxBehavior-2499995.onnx",
+                "reward": null,
+                "creation_time": 1609905314.1441815
+            },
+            {
+                "steps": 2999995,
+                "file_path": "results\\BallCatcher_02\\BoxBehavior\\BoxBehavior-2999995.onnx",
+                "reward": null,
+                "creation_time": 1609905962.428566
+            },
+            {
+                "steps": 3499995,
+                "file_path": "results\\BallCatcher_02\\BoxBehavior\\BoxBehavior-3499995.onnx",
+                "reward": null,
+                "creation_time": 1609906610.1006327
+            },
+            {
+                "steps": 3823700,
+                "file_path": "results\\BallCatcher_02\\BoxBehavior\\BoxBehavior-3823700.onnx",
+                "reward": null,
+                "creation_time": 1609907041.810196
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3823700,
+            "file_path": "results\\BallCatcher_02\\BoxBehavior.onnx",
+            "reward": null,
+            "creation_time": 1609907041.810196
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.2.0",
+        "mlagents_version": "0.22.0",
+        "torch_version": "1.7.0",
+        "tensorflow_version": -1
+    }
+}

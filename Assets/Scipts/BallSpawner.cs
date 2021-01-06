@@ -50,7 +50,7 @@ public class BallSpawner : MonoBehaviour
         GameObject ball = GetPooledObject();
         if (ball)
         {
-            ball.transform.position = new Vector3(Random.Range(-15, 15), SPAWN_POS_Y, 0);
+            ball.transform.localPosition = new Vector3(Random.Range(-15, 15), SPAWN_POS_Y, 0);
             ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
             ball.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             ball.SetActive(true);

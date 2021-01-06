@@ -10,7 +10,7 @@ public class FloorTrigger : MonoBehaviour
     {
         if (other.tag == "Ball")
         {
-            boxAgent.UpdateReward(-1);
+            boxAgent.UpdateReward(-0.1f);
             other.gameObject.SetActive(false);
         }
     }
